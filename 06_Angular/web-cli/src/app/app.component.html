@@ -1,0 +1,47 @@
+<div class="shell-container" (click)="focusInput()">
+  <div class="shell-body" #terminalBody>
+    @if (history.length === 0) {
+
+    <div class="shell-welcome">
+      <p>WebCLI v1.0.0</p>
+
+      <p>Type 'ng help' to see what I can do.</p>
+
+      <hr class="shell-divider" />
+    </div>
+
+    } @for (entry of history; track entry.timestamp) {
+
+    <div class="shell-entry">
+      <div class="shell-line">
+        <span class="shell-prompt">web-cli:~$</span>
+
+        <span class="shell-input-val">{{ entry.input }}</span>
+      </div>
+
+      @for (line of entry.responseLines; track $index) {
+
+      <div class="shell-response" [class.is-error]="!entry.success">
+        {{ line }}
+      </div>
+
+      }
+    </div>
+
+    }
+
+    <div class="shell-active">
+      <span class="shell-prompt">web-cli:~$</span>
+
+      <input
+        #commandInput
+        type="text"
+        [(ngModel)]="userInput"
+        (keyup.enter)="handleCommand()"
+        autocomplete="off"
+        spellcheck="false"
+        class="shell-field"
+      />
+    </div>
+  </div>
+</div>

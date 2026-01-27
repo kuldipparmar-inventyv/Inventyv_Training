@@ -1,0 +1,75 @@
+.shell-container {
+    background-color: #1e1e1e;
+    color: #cccccc;
+    font-family: 'Consolas', 'Courier New', monospace;
+    height: 90vh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 16px;
+  }
+  
+  .shell-body {
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 50px;
+  }
+  
+  .shell-welcome {
+    margin-bottom: 20px;
+    color: #4caf50;
+  }
+  
+  .shell-divider {
+    border: 0;
+    border-top: 1px dashed #444;
+    margin: 15px 0;
+  }
+  
+  .shell-entry {
+    margin-bottom: 15px;
+  }
+  
+  .shell-line {
+    display: flex;
+    align-items: center;
+  }
+  
+  .shell-prompt {
+    color: #4caf50;
+    margin-right: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  .shell-input-val {
+    color: #ffffff;
+  }
+  
+  .shell-response {
+    color: #d4d4d4;
+    margin-left: 20px;
+    white-space: pre-wrap;
+    margin-top: 4px;
+  }
+  
+  .is-error {
+    color: #ff5555;
+  }
+  
+  .shell-active {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .shell-field {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: inherit;
+    flex-grow: 1;
+    caret-color: #4caf50;
+  }
