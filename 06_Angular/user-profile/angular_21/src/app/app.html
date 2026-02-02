@@ -1,0 +1,6 @@
+<div class="container">
+    @if(userService.user()){
+    <app-user-card [user]="this.userService.user()" (statusChange)="onStatusChange($event)">
+    </app-user-card>
+    }
+</div>

@@ -1,0 +1,6 @@
+<div class="container">
+  <div *ngIf="currentUser">
+    <app-user-card [user]="currentUser" (statusChange)="onStatusChanged($event)">
+    </app-user-card>
+  </div>
+</div>

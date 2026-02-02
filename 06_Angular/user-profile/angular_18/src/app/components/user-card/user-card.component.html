@@ -1,0 +1,23 @@
+<mat-card class="user-card" [class.active-border]="user.isActive">
+  <mat-card-header>
+    <mat-card-title>User Profile</mat-card-title>
+    <mat-card-subtitle>{{ user.name }} ({{ user.age }} years old)</mat-card-subtitle>
+  </mat-card-header>
+
+  <img mat-card-image [src]="user.avatarUrl" alt="User Avatar">
+
+  <mat-card-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Edit Name</mat-label>
+      <input matInput #nameInput [(ngModel)]="user.name">
+    </mat-form-field>
+
+    <p>Status: <strong>{{ user.isActive ? 'Active' : 'Inactive' }}</strong></p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="toggleStatus()" [disabled]="!user.name">
+      Toggle Status
+    </button>
+  </mat-card-actions>
+</mat-card>

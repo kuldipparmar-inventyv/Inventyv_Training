@@ -1,0 +1,68 @@
+.user-card {
+    width: 360px;
+    margin: 20px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.user-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+.user-card.active-border {
+    border: 2px solid #4caf50;
+}
+
+mat-card-header {
+    padding-bottom: 8px;
+}
+
+mat-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+mat-card-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+img[mat-card-image] {
+    height: 200px;
+    object-fit: cover;
+}
+
+mat-card-content {
+    padding-top: 12px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+p {
+    margin-top: 12px;
+    font-size: 0.95rem;
+}
+
+p strong {
+    color: #4caf50;
+}
+
+.user-card:not(.active-border) p strong {
+    color: #f44336;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+}
+
+button[mat-raised-button] {
+    border-radius: 20px;
+    padding: 6px 18px;
+}
