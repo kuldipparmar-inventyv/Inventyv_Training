@@ -1,0 +1,25 @@
+<div class="header">
+    <h2>Products</h2>
+    <button mat-icon-button>
+        <mat-icon [matBadge]="cartService.totalItemsCount()" matBadgeColor="warn">
+            shopping_cart
+        </mat-icon>
+    </button>
+</div>
+
+<div class="product-grid">
+    @for (product of products(); track product.id) {
+    <mat-card class="product-card">
+        <img mat-card-image [src]="product.image" alt="Product">
+        <mat-card-content>
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.price | currency }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="addToCart(product)">
+                Add to Cart
+            </button>
+        </mat-card-actions>
+    </mat-card>
+    }
+</div>
