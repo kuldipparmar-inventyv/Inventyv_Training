@@ -1,0 +1,20 @@
+<div class="home-container">
+    @if (user ) {
+    <mat-card class="profile-card">
+        <div class="profile-header">
+            <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+            <p>{{ user.email }}</p>
+        </div>
+        <mat-card-content>
+            <div class="detail-row">
+                <strong>Gender:</strong> <span>{{ user.gender }}</span>
+            </div>
+            <div class="detail-row">
+                <strong>Username:</strong> <span>{{ user.username }}</span>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    } @else {
+    <p>Loading Profile...</p>
+    }
+</div>
